@@ -1,18 +1,22 @@
 // Obtener el contexto del canvas
 const ctx = document.getElementById('chartTransaccion').getContext('2d');
 
-// Crear la gráfica
+// Grafica
 const chartTransaccion = new Chart(ctx, {
   type: 'doughnut',
   data: {
+    // Tipo de datos
     labels: ['Depósitos', 'Retiros', 'Pagos de Servicios'],
     datasets: [{
+      // Descripción de los datos
       label: 'Transacciones realizadas',
-      data: [5, 3, 2], // Ejemplo: 5 depósitos, 3 retiros, 2 pagos
+      // Datos de la gráfica - cantidad
+      data: [5, 3, 2],
+      // Datos de la gráfica - colores
       backgroundColor: [
-        'rgba(40, 167, 69, 0.7)',    // verde para depósitos
-        'rgba(220, 53, 69, 0.7)',    // rojo para retiros
-        'rgba(255, 193, 7, 0.7)'     // amarillo para pagos
+        'rgba(40, 167, 69, 0.7)',
+        'rgba(220, 53, 69, 0.7)',
+        'rgba(255, 193, 7, 0.7)'
       ],
       borderColor: [
         'rgba(40, 167, 69, 1)',

@@ -1,4 +1,4 @@
-// Elementos 
+// Elementos del DOM
 const insertCardSection = document.getElementById("insert-card-section");
 const loginSection = document.getElementById("login-section");
 const readCardBtn = document.getElementById("read-card-btn");
