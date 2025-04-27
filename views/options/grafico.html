@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Bank - Gráfica de Transacciones</title>
+  <link rel="icon" href="../resources/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="graphic-background">
+  <div class="container mt-5 text-center">
+    <!-- HEADER -->
+    <div class="header-container">
+      <p class="header-title">Pokémon Bank</p>
+      <a href="../menu.html" class="btn btn-outline-danger header-back-btn" title="Regresar">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+    </div>
+
+    <!-- LOGIC -->
+    <h2 class="mt-4 mb-4">Gráfica de Transacciones</h2>
+
+    <div class="graphic-container card p-4">
+      <canvas id="chartTransaccion" width="400" height="400"></canvas>
+    </div>
+  </div>
+
+  <script src="../../js/grafico.js"></script>
+
+</body>
+
+</html>
