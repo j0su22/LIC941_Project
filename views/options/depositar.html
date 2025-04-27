@@ -6,20 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Depositar - Pokémon Bank</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="../../css/main.css">
 </head>
 
-<body>
-  <div class="container mt-5">
+<body class="deposit-background">
+  <div class="container mt-5 text-center">
     <!-- HEADER -->
-    <div class="mt-4">
-      <h2 class="text-center mt-4">Pokémon Bank</h2>
-      <a href="../menu.html" class="btn btn-outline-danger btn-block">Regresar</a>
+    <div class="header-container">
+      <p class="header-title">Pokémon Bank</p>
+      <a href="../menu.html" class="btn btn-outline-danger header-back-btn" title="Regresar">
+        <i class="fas fa-arrow-left"></i>
+      </a>
     </div>
 
     <!-- LOGIC -->
     <div class="container mt-5">
-      <h2 class="text-center mb-4">Depositar Fondos</h2>
+      <h2 class="mb-4">Depositar Fondos</h2>
       <form id="deposit-form" class="card p-4">
         <div class="form-group">
           <label for="deposit-amount">Monto a depositar:</label>

@@ -6,23 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Historial de Transacciones - Pokémon Bank</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="../../css/main.css">
 </head>
 
-<body>
-  <div class="container mt-5">
+<body class="history-background">
+  <div class="container mt-5 text-center">
     <!-- HEADER -->
-    <div class="mt-4">
-      <h2 class="text-center mt-4">Pokémon Bank</h2>
-      <a href="../menu.html" class="btn btn-outline-danger btn-block">Regresar</a>
+    <div class="header-container">
+      <p class="header-title">Pokémon Bank</p>
+      <a href="../menu.html" class="btn btn-outline-danger header-back-btn" title="Regresar">
+        <i class="fas fa-arrow-left"></i>
+      </a>
     </div>
 
     <!-- LOGIC -->
     <div class="container mt-5">
-      <h2 class="text-center mb-4">Historial de Transacciones</h2>
+      <h2 class="mb-4">Historial de Transacciones</h2>
 
       <div class="table-responsive">
-        <table class="table table-striped table-bordered text-center">
+        <table class="table table-striped table-bordered">
           <thead class="thead-dark">
             <tr>
               <th>Fecha</th>
@@ -31,7 +34,7 @@
               <th>Descripción / Servicio</th>
             </tr>
           </thead>
-          <tbody id="historial-body">
+          <tbody id="history-body">
             <!-- Las filas de transacciones se insertarán aquí dinámicamente -->
           </tbody>
         </table>

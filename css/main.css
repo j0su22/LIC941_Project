@@ -1,3 +1,190 @@
+/* Estilo general */
+body {
+    background: linear-gradient(to bottom, #aee1f9, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+}
+
+/* Fondos */
+.login-background {
+    background-image: url('../resources/login.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.menu-background {
+    background-image: url('../resources/menu.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.deposit-background {
+    background-image: url('../resources/depositar.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.withdraw-background {
+    background-image: url('../resources/retiro.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.current-background {
+    background-image: url('../resources/consulta.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.service-background {
+    background-image: url('../resources/servicios.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.history-background {
+    background-image: url('../resources/historial.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.graphic-background {
+    background-image: url('../resources/grafico.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Títulos principales */
+h1,
+h2,
+h3,
+h4 {
+    color: #ff0000;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Headers */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.header-back-btn {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+}
+
+/* Botones */
+.btn {
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.btn-success {
+    background-color: #33ff00;
+    border: none;
+    color: #000;
+}
+
+.btn-danger {
+    background-color: #ff0000;
+    border: none;
+}
+
+.btn-info {
+    background-color: #0075be;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffd700;
+    border: none;
+}
+
+.btn-outline-danger {
+    border: 2px solid #ff0000;
+    color: #ff0000;
+}
+
+/* Card de fondos */
+.card {
+    border: 3px solid #ffcc00;
+    border-radius: 20px;
+    background-color: #ffffffc9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto de saldo actual */
+#saldo-actual {
+    font-size: 3rem;
+    color: #0075be;
+    font-weight: bold;
+}
+
+/* Gráfico */
 .graphic-container {
     position: relative;
     width: 100%;
