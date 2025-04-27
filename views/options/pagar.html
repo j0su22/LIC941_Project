@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagar Servicios - Pokémon Bank</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="mt-4">
+      <h2 class="text-center mt-4">Pokémon Bank</h2>
+      <a href="../menu.html" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Pago de Servicios</h2>
+      <form id="service-payment-form" class="card p-4">
+        <div class="form-group">
+          <label for="service-type">Seleccione el servicio:</label>
+          <select id="service-type" class="form-control" required>
+            <option value="" disabled selected>Seleccione...</option>
+            <option value="energy">Energía Eléctrica</option>
+            <option value="water">Agua Potable</option>
+            <option value="internet">Internet</option>
+            <option value="telephone">Telefonía</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="service-amount">Monto a pagar:</label>
+          <input type="number" id="service-amount" class="form-control" min="1" placeholder="Ingrese monto" required>
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-block">Pagar Servicio</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
