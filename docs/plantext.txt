@@ -1,0 +1,40 @@
+URL: https://www.planttext.com/
+
+script:
+@startuml
+start
+
+:Insertar Tarjeta;
+:Ingresar PIN;
+:Mostrar Menú Principal;
+
+:Seleccionar Opción;
+
+if (Opción = Depositar) then (Sí)
+  :Realizar Depósito;
+  --> Seleccionar Opción
+elseif (Opción = Retirar) then (Sí)
+  :Realizar Retiro;
+  --> Seleccionar Opción
+elseif (Opción = Consultar Saldo) then (Sí)
+  :Mostrar Saldo;
+  --> Seleccionar Opción
+elseif (Opción = Pagar Servicios) then (Sí)
+  :Seleccionar Servicio;
+  :Realizar Pago;
+  --> Seleccionar Opción
+elseif (Opción = Ver Historial) then (Sí)
+  :Mostrar Historial;
+  --> Seleccionar Opción
+elseif (Opción = Ver Gráfica) then (Sí)
+  :Mostrar Gráfica;
+  --> Seleccionar Opción
+elseif (Opción = Cerrar Sesión) then (Sí)
+  :Cerrar Sesión;
+  stop
+else
+  :Opción inválida;
+  --> Seleccionar Opción
+endif
+
+@enduml
