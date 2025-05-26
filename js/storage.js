@@ -1,14 +1,23 @@
-// Obtener todas las transacciones
+// Obtener el usuario activo del localStorage
+function getUsuarioActivo() {
+    return JSON.parse(localStorage.getItem("usuarioActivo"));
+}
+
+// Obtener transacciones del usuario activo
 function obtenerTransacciones() {
-    return JSON.parse(localStorage.getItem("transacciones")) || [];
+    const usuario = getUsuarioActivo();
+    const clave = `transacciones_${usuario.cuenta}`;
+    return JSON.parse(localStorage.getItem(clave)) || [];
 }
 
-// Guardar transacciones
+// Guardar transacciones en el localStorage
 function guardarTransacciones(lista) {
-    localStorage.setItem("transacciones", JSON.stringify(lista));
+    const usuario = getUsuarioActivo();
+    const clave = `transacciones_${usuario.cuenta}`;
+    localStorage.setItem(clave, JSON.stringify(lista));
 }
 
-// Agregar una nueva transacción
+// Agregar una transacción al localStorage
 function agregarTransaccion(tipo, monto, descripcion = "") {
     const transaccion = {
         tipo,
