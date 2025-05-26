@@ -97,58 +97,74 @@ body {
 
 /* Estilo para la imagen de insertar tarjeta */
 .insert-card-img {
-  cursor: pointer;
-  width: 350px;       /* Tamaño fijo grande */
-  max-width: 80%;     /* Pero adaptable en pantallas pequeñas */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.2s ease;
+    cursor: pointer;
+    width: 350px;
+    /* Tamaño fijo grande */
+    max-width: 80%;
+    /* Pero adaptable en pantallas pequeñas */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
 }
 
 .insert-card-img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .insert-card-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
 
 /* Estilo pantalla ingreso de PIN */
 .pin-label {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .pin-input {
-  font-size: 2rem;
-  height: 70px;
-  text-align: center;
-  border-radius: 12px;
+    font-size: 2rem;
+    height: 70px;
+    text-align: center;
+    border-radius: 12px;
 }
 
-/* Botón cuadrado y angosto */
 .pin-button {
-  font-size: 1.6rem;
-  height: 80px;
-  width: 220px;
-  border-radius: 8px; /* ¡Ahora sí es cuadrado! */
-  display: block;
-  margin: 1.5rem auto 0 auto;
+    font-size: 1.6rem;
+    height: 80px;
+    width: 220px;
+    border-radius: 8px;
+    /* ¡Ahora sí es cuadrado! */
+    display: block;
+    margin: 1.5rem auto 0 auto;
 }
 
 /* Elimina animaciones de todos los botones */
 .btn {
-  transition: none !important;
+    transition: none !important;
 }
 
 .btn:hover {
-  transform: none !important;
-  opacity: 1 !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Botones del menu */
+.menu-buttons {
+    font-size: 1.6rem;
+    height: 7rem;
+    width: 25rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto 0 auto;
+    text-align: center;
+    font-weight: bold;
 }
 
 
