@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokémon Bank - Depositar</title>
-  <link rel="icon" href="../resources/icon.png" type="image/png">
+  <link rel="icon" href="../resources/iconos/icon.png" type="image/png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="../../css/main.css">
@@ -13,26 +13,26 @@
 
 <body class="deposit-background">
   <div class="container mt-5 text-center">
-    <!-- HEADER -->
     <div class="header-container">
       <p class="header-title">Pokémon Bank</p>
       <a href="../menu.html" class="btn btn-outline-danger header-back-btn" title="Regresar">
         <i class="fas fa-arrow-left"></i>
       </a>
     </div>
+    <h2 class="mt-4 mb-4">Depositar</h2>
 
-    <!-- LOGIC -->
-    <div class="container mt-5">
-      <h2 class="mb-4">Depositar Fondos</h2>
-      <form id="deposit-form" class="card p-4">
-        <div class="form-group">
-          <label for="deposit-amount">Monto a depositar:</label>
-          <input type="number" id="deposit-amount" class="form-control" min="1" placeholder="Ingrese monto" required>
-        </div>
-        <button type="submit" class="btn btn-success btn-block">Depositar</button>
-      </form>
-    </div>
+    <form id="deposit-form" class="card p-4">
+      <div class="form-group">
+        <label for="deposit-amount">Monto:</label>
+        <input type="number" id="deposit-amount" class="form-control" min="1" placeholder="Ingrese monto" required>
+      </div>
+      <button type="submit" class="btn btn-success btn-block">Depositar</button>
+    </form>
+
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/options/depositar.js"></script>
 </body>
 
 </html>

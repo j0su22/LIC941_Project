@@ -7,7 +7,7 @@ body {
 
 /* Fondos */
 .login-background {
-    background-image: url('../resources/login.jpeg');
+    background-image: url('../resources/backgrounds/login.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,8 +17,9 @@ body {
     padding-bottom: 50px;
 }
 
+/* Estilo para los fondos*/
 .menu-background {
-    background-image: url('../resources/menu.jpeg');
+    background-image: url('../resources/backgrounds/menu.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +30,7 @@ body {
 }
 
 .deposit-background {
-    background-image: url('../resources/depositar.jpeg');
+    background-image: url('../resources/backgrounds/depositar.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,7 +41,7 @@ body {
 }
 
 .withdraw-background {
-    background-image: url('../resources/retiro.jpeg');
+    background-image: url('../resources/backgrounds/retiro.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,7 +52,7 @@ body {
 }
 
 .current-background {
-    background-image: url('../resources/consulta.jpeg');
+    background-image: url('../resources/backgrounds/consulta.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,7 +63,7 @@ body {
 }
 
 .service-background {
-    background-image: url('../resources/servicios.jpeg');
+    background-image: url('../resources/backgrounds/servicios.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,7 +74,7 @@ body {
 }
 
 .history-background {
-    background-image: url('../resources/historial.jpeg');
+    background-image: url('../resources/backgrounds/historial.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +85,7 @@ body {
 }
 
 .graphic-background {
-    background-image: url('../resources/grafico.jpeg');
+    background-image: url('../resources/backgrounds/grafico.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -93,6 +94,79 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+/* Estilo para la imagen de insertar tarjeta */
+.insert-card-img {
+    cursor: pointer;
+    width: 350px;
+    /* Tamaño fijo grande */
+    max-width: 80%;
+    /* Pero adaptable en pantallas pequeñas */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+}
+
+.insert-card-img:hover {
+    transform: scale(1.05);
+}
+
+.insert-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Estilo pantalla ingreso de PIN */
+.pin-label {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pin-input {
+    font-size: 2rem;
+    height: 70px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.pin-button {
+    font-size: 1.6rem;
+    height: 80px;
+    width: 220px;
+    border-radius: 8px;
+    /* ¡Ahora sí es cuadrado! */
+    display: block;
+    margin: 1.5rem auto 0 auto;
+}
+
+/* Elimina animaciones de todos los botones */
+.btn {
+    transition: none !important;
+}
+
+.btn:hover {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Botones del menu */
+.menu-buttons {
+    font-size: 1.6rem;
+    height: 7rem;
+    width: 25rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
 
 /* Títulos principales */
 h1,
@@ -167,6 +241,11 @@ h4 {
 .btn-outline-danger {
     border: 2px solid #ff0000;
     color: #ff0000;
+}
+
+#generar-pdf {
+  margin-left: 1rem;
+  padding: 10px 14px;
 }
 
 /* Card de fondos */

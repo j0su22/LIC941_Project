@@ -1,18 +1,25 @@
-// Obtener el contexto del canvas
+const transacciones = obtenerTransacciones();
+
+const resumen = {
+  Deposito: 0,
+  Retiro: 0,
+  Servicio: 0
+};
+
+transacciones.forEach(t => {
+  if (resumen[t.tipo] !== undefined) {
+    resumen[t.tipo] += Math.abs(t.monto);
+  }
+});
+
 const ctx = document.getElementById('chartTransaccion').getContext('2d');
 
-// Grafica
 const chartTransaccion = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    // Tipo de datos
     labels: ['Depósitos', 'Retiros', 'Pagos de Servicios'],
     datasets: [{
-      // Descripción de los datos
-      label: 'Transacciones realizadas',
-      // Datos de la gráfica - cantidad
-      data: [5, 3, 2],
-      // Datos de la gráfica - colores
+      data: [resumen.Deposito, resumen.Retiro, resumen.Servicio],
       backgroundColor: [
         'rgba(40, 167, 69, 0.7)',
         'rgba(220, 53, 69, 0.7)',
