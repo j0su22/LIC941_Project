@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokémon Bank - Historial de Transacciones</title>
-  <link rel="icon" href="../resources/icon.png" type="image/png">
+  <link rel="icon" href="../resources/iconos/icon.png" type="image/png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="../../css/main.css">
@@ -13,7 +13,6 @@
 
 <body class="history-background">
   <div class="container mt-5 text-center">
-    <!-- HEADER -->
     <div class="header-container">
       <p class="header-title">Pokémon Bank</p>
       <a href="../menu.html" class="btn btn-outline-danger header-back-btn" title="Regresar">
@@ -21,27 +20,34 @@
       </a>
     </div>
 
-    <!-- LOGIC -->
-    <div class="container mt-5">
-      <h2 class="mb-4">Historial de Transacciones</h2>
-
-      <div class="table-responsive">
-        <table class="table table-striped table-bordered">
-          <thead class="thead-dark">
-            <tr>
-              <th>Fecha</th>
-              <th>Tipo de Transacción</th>
-              <th>Monto</th>
-              <th>Descripción / Servicio</th>
-            </tr>
-          </thead>
-          <tbody id="history-body">
-            <!-- Las filas de transacciones se insertarán aquí dinámicamente -->
-          </tbody>
-        </table>
-      </div>
+    <div class="d-flex justify-content-center align-items-center gap-3 mt-4 mb-4 position-relative">
+      <h2 class="mb-0">Historial de Transacciones</h2>
+      <button id="generar-pdf" class="btn btn-outline-danger ml-3" title="Descargar PDF">
+        <i class="fas fa-file-pdf fa-lg"></i>
+      </button>
     </div>
+
+
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Fecha</th>
+            <th>Tipo de Transacción</th>
+            <th>Monto</th>
+            <th>Descripción / Servicio</th>
+          </tr>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
+    </div>
+
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/options/historial.js"></script>
+
 </body>
 
 </html>

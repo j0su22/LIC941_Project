@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Bank - Menú Principal</title>
-    <link rel="icon" href="../resources/icon.png" type="image/png">
+    <link rel="icon" href="../resources/iconos/icon.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
@@ -24,22 +24,22 @@
                 <!-- MENU -->
                 <div class="row mt-4">
                     <div class="col-6 mb-3">
-                        <a href="options/depositar.html" class="btn btn-warning btn-block">Depositar</a>
+                        <a href="options/depositar.html" class="btn btn-warning menu-buttons">Depositar</a>
                     </div>
                     <div class="col-6 mb-3">
-                        <a href="options/retirar.html" class="btn btn-danger btn-block">Retirar</a>
+                        <a href="options/retirar.html" class="btn btn-danger menu-buttons">Retirar</a>
                     </div>
                     <div class="col-6 mb-3">
-                        <a href="options/consultar.html" class="btn btn-info btn-block">Consultar Saldo</a>
+                        <a href="options/consultar.html" class="btn btn-info menu-buttons">Consultar Saldo</a>
                     </div>
                     <div class="col-6 mb-3">
-                        <a href="options/pagar.html" class="btn btn-success btn-block">Pagar Servicios</a>
+                        <a href="options/pagar.html" class="btn btn-success menu-buttons">Pagar Servicios</a>
                     </div>
                     <div class="col-6 mb-3">
-                        <a href="options/historial.html" class="btn btn-secondary btn-block">Historial</a>
+                        <a href="options/historial.html" class="btn btn-secondary menu-buttons">Historial</a>
                     </div>
                     <div class="col-6 mb-3">
-                        <a href="options/grafico.html" class="btn btn-dark btn-block">Gráfica</a>
+                        <a href="options/grafico.html" class="btn btn-dark menu-buttons">Gráfica</a>
                     </div>
                 </div>
 
@@ -55,6 +55,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+        if (usuario) {
+            document.getElementById("user-name").textContent = usuario.nombre;
+            document.getElementById("account-number").textContent = usuario.cuenta;
+        }
+    </script>
+
 </body>
 
 </html>
