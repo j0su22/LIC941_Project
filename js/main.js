@@ -1,22 +1,36 @@
-// Elementos del DOM
-const insertCardSection = document.getElementById("insert-card-section");
-const loginSection = document.getElementById("login-section");
-const readCardBtn = document.getElementById("read-card-btn");
-const loginForm = document.getElementById("login-form");
+document.addEventListener("DOMContentLoaded", function () {
+  const insertCardSection = document.getElementById("insert-card-section");
+  const loginSection = document.getElementById("login-section");
+  const readCardBtn = document.getElementById("read-card-btn");
+  const loginForm = document.getElementById("login-form");
 
-// Leer Tarjeta - Simula la lectura de tarjeta en un ATM
-readCardBtn.addEventListener("click", function () {
+  // Leer tarjeta (imagen)
+  readCardBtn.addEventListener("click", () => {
     insertCardSection.classList.add("d-none");
     loginSection.classList.remove("d-none");
-});
+  });
 
-// Login - aún no funcional, luego se validara el PIN
-loginForm.addEventListener("submit", function (e) {
+  // Validar PIN
+  loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const pin = document.getElementById("pin").value.trim();
-    if (pin.length === 4) {
+
+    if (/^\d{4}$/.test(pin)) {
+      Swal.fire({
+        title: '¡Bienvenido!',
+        text: 'Has ingresado correctamente a Pokémon Bank.',
+        icon: 'success',
+        confirmButtonText: 'Continuar'
+      }).then(() => {
         window.location.href = "views/menu.html";
+      });
     } else {
-        alert("El PIN debe tener exactamente 4 dígitos.");
+      Swal.fire({
+        title: 'PIN inválido',
+        text: 'El PIN debe contener exactamente 4 dígitos numéricos.',
+        icon: 'error',
+        confirmButtonText: 'Intentar de nuevo'
+      });
     }
+  });
 });
