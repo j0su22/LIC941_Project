@@ -1,11 +1,12 @@
-# 🏦 Pokemon Bank - Simulador de Cajero Automático (ATM)
+# 🏦 Pokémon Bank - Simulador de Cajero Automático (ATM)
 
 Esta es una aplicación web desarrollada con **HTML5**, **CSS** y **JavaScript**, diseñada para simular un cajero automático ATM.
 
 ---
 
-📈 Estado del Proyecto
-    ✅ Fase 1: Front-End básico completado
+📈 Estado del Proyecto  
+    ✅ Fase 1: Front-End básico y flujo completado
+    ✅ Fase 2: Lógica de usuarios, transacciones y almacenamiento y exportación a PDF y validaciones finales
 
 ---
 
@@ -19,26 +20,31 @@ El proyecto permite realizar transacciones básicas como:
 - Pagar servicios
 - Visualizar historial de transacciones
 - Ver una gráfica de análisis de transacciones
+- Exportar historial en formato PDF
+- Manejo multiusuario según PIN ingresado
 
 ---
 
 ## 📋 Funcionalidades
 
 - **Login Seguro:** Solicita la inserción de tarjeta y PIN de 4 dígitos.
-- **Menú principal** con navegación a diferentes operaciones.
-- **Depósitos y Retiros** simulados.
-- **Consulta de saldo** en pantalla.
-- **Pago de servicios** básicos (agua, luz, internet, telefonía).
-- **Historial de transacciones** en tabla responsive.
-- **Gráfica Doughnut** representando el tipo de transacciones realizadas.
+- **Multiusuario:** Cada usuario tiene nombre y número de cuenta únicos, gestionados según su PIN.
+- **Transacciones separadas por usuario:** Cada cuenta mantiene su historial y saldo individual.
+- **Validación de saldo:** No es posible retirar o pagar si no hay fondos suficientes.
+- **Confirmaciones inteligentes:** SweetAlert2 confirma cada operación (retiro, pago, depósito).
+- **Historial de transacciones:** Visualización detallada con opción de exportar a PDF.
+- **Gráfica tipo doughnut:** Muestra proporción de movimientos según categoría (depósito, retiro, servicios).
+- **Interfaz tipo cajero ATM:** Centrada, accesible, clara y responsiva.
 
 ---
 
 ## 🎨 Estilo Gráfico
 
-- **Inspirado en Pokémon**: colores rojo, amarillo y azul.
-- **Fondos personalizados** en cada pantalla.
-- **Títulos y botones estilizados** para mejorar la experiencia visual.
+- **Inspirado en Pokémon**: Colores temáticos como rojo, amarillo, azul y verde.
+- **Fondos personalizados** para cada pantalla de operación.
+- **Títulos y botones estilizados** con borde redondeado, íconos y colores dinámicos.
+- **Botones con íconos (FontAwesome)** para navegación y exportación visual más amigable.
+- **Diseño adaptable tipo ATM**: Inputs grandes, botones centrados, interfaz enfocada y simple.
 
 ---
 
@@ -56,10 +62,12 @@ Esto facilita la trazabilidad del proyecto y su documentación técnica.
 ## 🚀 Tecnologías Utilizadas
 
 - **HTML5** – Estructura de las páginas web
-- **CSS3** (personalizado y Bootstrap 4) – Diseño y responsive
-- **JavaScript** – Lógica básica de navegación
-- **Chart.js** – Gráficas de transacciones
-- **SweetAlert** *(en fases futuras)* – Alertas personalizadas
+- **CSS3** – Estilos personalizados + Bootstrap 4
+- **JavaScript** – Lógica principal de aplicación
+- **Chart.js** – Visualización de gráficas en tiempo real
+- **SweetAlert2** – Confirmaciones y alertas interactivas
+- **jsPDF + autoTable** – Generación de historial de movimientos en PDF
+- **LocalStorage** – Persistencia de datos del usuario sin backend
 
 ---
 
@@ -68,21 +76,31 @@ Esto facilita la trazabilidad del proyecto y su documentación técnica.
 LIC941_P1/
 
     ├── css/
-        └── main.css
+    │   └── main.css
     ├── docs/
     ├── js/
-        └── main.js
+    │   ├── main.js
+    │   ├── storage.js
+    │   ├── options/
+    │   │   ├── consultar.js
+    │   │   ├── depositar.js
+    │   │   ├── grafico.js
+    │   │   ├── historial.js
+    │   │   ├── pagar.js
+    │   │   └── retirar.js
     ├── resources/
+    │   ├── backgrounds/
+    │   └── iconos/
     ├── views/
-        ├── options/
-            ├── consultar.html
-            ├── depositar.html
-            ├── grafico.html
-            ├── historial.html
-            ├── pagar.html
-            ├── retirar.html
-        ├── menu.html
-    ├── index.html (Login)
+    │   ├── options/
+    │   │   ├── consultar.html
+    │   │   ├── depositar.html
+    │   │   ├── grafico.html
+    │   │   ├── historial.html
+    │   │   ├── pagar.html
+    │   │   ├── retirar.html
+    │   └── menu.html
+    ├── index.html
     └── README.md
 
 ---
@@ -90,15 +108,15 @@ LIC941_P1/
 ## 🚀 Cómo usar
 
 1. Descarga o clona este repositorio.
-2. Abre el archivo `index.html` en tu navegador web.
+2. Abre el archivo `index.html` en tu navegador.
+3. Ingresa un PIN válido (`1234`, `2222`, `0000`) para acceder como Ash, Josue o Pepito.
+4. Comienza a simular transacciones.
 
 ---
 
 ## 🎓 Autor
 
-**Josué Cortez - CA242249**
+**Josué Cortez - CA242249**  
 Desarrollado como parte del curso _Desarrollo de Aplicaciones Web con Software Interpretado en el Cliente_.
-
-
 
 ---
