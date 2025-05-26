@@ -243,6 +243,11 @@ h4 {
     color: #ff0000;
 }
 
+#generar-pdf {
+  margin-left: 1rem;
+  padding: 10px 14px;
+}
+
 /* Card de fondos */
 .card {
     border: 3px solid #ffcc00;
