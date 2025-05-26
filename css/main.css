@@ -7,7 +7,7 @@ body {
 
 /* Fondos */
 .login-background {
-    background-image: url('../resources/login.jpeg');
+    background-image: url('../resources/backgrounds/login.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,8 +17,9 @@ body {
     padding-bottom: 50px;
 }
 
+/* Estilo para los fondos*/
 .menu-background {
-    background-image: url('../resources/menu.jpeg');
+    background-image: url('../resources/backgrounds/menu.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +30,7 @@ body {
 }
 
 .deposit-background {
-    background-image: url('../resources/depositar.jpeg');
+    background-image: url('../resources/backgrounds/depositar.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,7 +41,7 @@ body {
 }
 
 .withdraw-background {
-    background-image: url('../resources/retiro.jpeg');
+    background-image: url('../resources/backgrounds/retiro.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,7 +52,7 @@ body {
 }
 
 .current-background {
-    background-image: url('../resources/consulta.jpeg');
+    background-image: url('../resources/backgrounds/consulta.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,7 +63,7 @@ body {
 }
 
 .service-background {
-    background-image: url('../resources/servicios.jpeg');
+    background-image: url('../resources/backgrounds/servicios.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,7 +74,7 @@ body {
 }
 
 .history-background {
-    background-image: url('../resources/historial.jpeg');
+    background-image: url('../resources/backgrounds/historial.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +85,7 @@ body {
 }
 
 .graphic-background {
-    background-image: url('../resources/grafico.jpeg');
+    background-image: url('../resources/backgrounds/grafico.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
